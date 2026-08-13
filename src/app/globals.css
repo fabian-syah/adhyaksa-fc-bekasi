@@ -82,11 +82,11 @@ body {
   }
 
   .btn-primary {
-    @apply bg-afc-green text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden rounded-full uppercase tracking-widest text-sm sm:text-base md:text-lg transition-colors hover:bg-afc-green/80;
+    @apply relative bg-afc-green text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden rounded-full uppercase tracking-widest text-sm sm:text-base md:text-lg transition-colors hover:bg-afc-green/80;
   }
 
   .btn-outline {
-    @apply bg-transparent text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden border border-afc-green/40 rounded-full uppercase tracking-widest text-sm sm:text-base md:text-lg transition-colors hover:bg-afc-green/20 hover:border-afc-green;
+    @apply relative bg-transparent text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden border border-afc-green/40 rounded-full uppercase tracking-widest text-sm sm:text-base md:text-lg transition-colors hover:bg-afc-green/20 hover:border-afc-green;
   }
 
   .border-b-subtle {
