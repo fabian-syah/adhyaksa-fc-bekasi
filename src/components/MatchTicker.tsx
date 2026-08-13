@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Trophy } from 'lucide-react';
+import { CalendarBlank, MapPinLine, Trophy } from '@phosphor-icons/react';
 
 const easing = [0.16, 1, 0.3, 1] as const;
 
@@ -40,12 +40,12 @@ export default function MatchTicker() {
   const { timeLeft: countdown, mounted } = useCountdown(SEASON_START);
 
   return (
-    <section id="matches" className="w-full bg-afc-base py-12 sm:py-16 md:py-24 border-b border-afc-border">
-      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+    <section id="matches" className="w-full bg-afc-base section-padding border-b-subtle">
+      <div className="container-default">
 
         {/* Section Header */}
-        <div className="mb-8 sm:mb-12 border-b border-afc-border pb-4 sm:pb-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading text-afc-main uppercase tracking-widest">
+        <div className="mb-8 sm:mb-12 border-b-subtle pb-4 sm:pb-6">
+          <h2 className="text-heading-xl text-afc-main">
             Musim <span className="text-afc-green">2026/2027</span>
           </h2>
         </div>
@@ -66,7 +66,7 @@ export default function MatchTicker() {
             {/* Badge */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
               <span className="inline-flex items-center gap-1.5 text-afc-green font-bold uppercase tracking-widest text-[10px] sm:text-xs border border-afc-green/30 px-2.5 sm:px-3 py-1">
-                <Trophy size={12} className="shrink-0" />
+                <Trophy weight="fill" size={14} className="shrink-0" />
                 Championship 2026/2027
               </span>
               <span className="inline-flex items-center gap-1.5 text-afc-gold font-bold uppercase tracking-widest text-[10px] sm:text-xs border border-afc-gold/30 px-2.5 sm:px-3 py-1">
@@ -80,12 +80,12 @@ export default function MatchTicker() {
             </h3>
             <p className="text-afc-main/60 font-bold uppercase tracking-wider text-xs sm:text-sm mb-8 sm:mb-10 md:mb-12 flex flex-wrap items-center gap-x-3 gap-y-1">
               <span className="inline-flex items-center gap-1.5">
-                <Calendar size={13} className="text-afc-green shrink-0" />
+                <CalendarBlank weight="bold" size={14} className="text-afc-green shrink-0" />
                 18 September 2026
               </span>
               <span className="text-afc-main/20 hidden sm:inline">•</span>
               <span className="inline-flex items-center gap-1.5">
-                <MapPin size={13} className="text-afc-green shrink-0" />
+                <MapPinLine weight="bold" size={14} className="text-afc-green shrink-0" />
                 Patriot Candrabhaga, Bekasi
               </span>
             </p>

@@ -67,3 +67,33 @@ body {
   animation: marquee 25s linear infinite;
   will-change: transform;
 }
+
+@layer utilities {
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-24;
+  }
+  
+  .container-default {
+    @apply container mx-auto px-4 sm:px-6 max-w-7xl;
+  }
+
+  .text-heading-xl {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading uppercase tracking-widest leading-none;
+  }
+
+  .btn-primary {
+    @apply bg-afc-green text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden rounded-full uppercase tracking-widest text-sm sm:text-base md:text-lg transition-colors hover:bg-afc-green/80;
+  }
+
+  .btn-outline {
+    @apply bg-transparent text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden border border-afc-green/40 rounded-full uppercase tracking-widest text-sm sm:text-base md:text-lg transition-colors hover:bg-afc-green/20 hover:border-afc-green;
+  }
+
+  .border-b-subtle {
+    @apply border-b border-afc-border;
+  }
+
+  .text-overline {
+    @apply font-bold uppercase tracking-wider sm:tracking-widest text-xs sm:text-sm;
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { MapPin, Mail, Phone, ArrowRight } from 'lucide-react';
+import { ArrowRight } from '@phosphor-icons/react';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
       {/* Background kinetic pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '32px 32px' }}></div>
       
-      <div className="container mx-auto px-4 sm:px-6 pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-12 relative z-10 max-w-7xl">
+      <div className="container-default pt-12 sm:pt-16 md:pt-20 pb-8 sm:pb-12 relative z-10">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-0 border border-afc-border mb-10 sm:mb-16 bg-afc-surface">
           
@@ -97,7 +97,7 @@ export default function Footer() {
                 className="group relative w-full bg-afc-gold-glow text-afc-gold font-bold uppercase py-3 sm:py-4 flex items-center justify-center gap-2 sm:gap-3 border border-afc-gold/30 overflow-hidden hover:bg-afc-gold-glow/80 transition-colors"
               >
                 <span className="relative z-10 tracking-wider sm:tracking-widest text-xs sm:text-sm">Berlangganan</span>
-                <ArrowRight className="relative z-10 transition-transform group-hover:translate-x-2" size={16} />
+                <ArrowRight weight="bold" className="relative z-10 transition-transform group-hover:translate-x-2" size={16} />
               </motion.button>
             </form>
           </div>

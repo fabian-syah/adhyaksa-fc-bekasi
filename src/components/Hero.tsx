@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight, Calendar } from 'lucide-react';
+import { CaretRight, CalendarBlank } from '@phosphor-icons/react';
 
 const easing = [0.16, 1, 0.3, 1] as const; // easeOutExpo
 
@@ -17,8 +17,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 z-10 pt-20 sm:pt-24 pb-12 sm:pb-16">
-        <div className="max-w-6xl mx-auto flex flex-col items-start justify-center">
+      <div className="container-default z-10 pt-20 sm:pt-24 pb-12 sm:pb-16">
+        <div className="flex flex-col items-start justify-center">
           
           {/* Main Headline */}
           <div className="flex flex-wrap gap-x-2 sm:gap-x-3 md:gap-x-5 gap-y-0 mb-6 sm:mb-8">
@@ -63,20 +63,20 @@ export default function Hero() {
           >
             <a 
               href="#tickets"
-              className="group relative bg-afc-green text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden rounded-full uppercase tracking-widest text-sm sm:text-base md:text-lg transition-colors"
+              className="group btn-primary"
             >
               <span className="relative z-10 group-hover:text-afc-green transition-colors duration-300">Beli Tiket Laga</span>
-              <Calendar size={20} className="relative z-10 transition-all duration-300 group-hover:scale-110 group-hover:text-afc-green sm:w-6 sm:h-6" />
+              <CalendarBlank weight="fill" size={20} className="relative z-10 transition-all duration-300 group-hover:scale-110 group-hover:text-afc-green sm:w-6 sm:h-6" />
               <div className="absolute inset-0 bg-white -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-[0.16,1,0.3,1] z-0"></div>
             </a>
             <motion.a 
               href="#squad"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="group relative bg-transparent text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden border border-afc-green/40 uppercase tracking-widest text-sm sm:text-base md:text-lg bg-black/20 backdrop-blur-sm rounded-full"
+              className="group btn-outline bg-black/20 backdrop-blur-sm"
             >
               <span className="relative z-10 transition-colors duration-300">Lihat Skuad</span>
-              <ChevronRight size={20} className="relative z-10 transition-colors duration-300 sm:w-6 sm:h-6" />
+              <CaretRight weight="bold" size={20} className="relative z-10 transition-colors duration-300 sm:w-6 sm:h-6" />
               <div className="absolute inset-0 bg-afc-green/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.16,1,0.3,1] z-0"></div>
             </motion.a>
           </motion.div>

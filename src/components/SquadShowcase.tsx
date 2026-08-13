@@ -14,20 +14,13 @@ const squad = [
 
 export default function SquadShowcase() {
   return (
-    <section id="squad" className="w-full bg-afc-base py-12 sm:py-16 md:py-24 border-b border-afc-green/20 overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+    <section id="squad" className="w-full bg-afc-base section-padding border-b border-afc-green/20 overflow-hidden">
+      <div className="container-default">
         
-        <div className="mb-8 sm:mb-12 md:mb-16 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-afc-border pb-4 gap-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading text-afc-main uppercase tracking-widest">
+        <div className="mb-8 sm:mb-12 md:mb-16 flex flex-col md:flex-row justify-between items-start md:items-end border-b-subtle pb-4 gap-4">
+          <h2 className="text-heading-xl text-afc-main">
             Tim <span className="text-afc-green">Utama</span>
           </h2>
-          <motion.button 
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="hidden md:block bg-transparent border border-afc-green/40 text-afc-main font-bold px-6 lg:px-10 py-3 lg:py-4 hover:bg-afc-green/20 hover:border-afc-green transition-colors uppercase tracking-widest text-sm mt-4"
-          >
-            Daftar Pemain Lengkap
-          </motion.button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
@@ -65,14 +58,6 @@ export default function SquadShowcase() {
             </motion.div>
           ))}
         </div>
-
-        <motion.button 
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className="w-full sm:hidden mt-6 bg-transparent border border-afc-green/40 text-afc-main font-bold px-6 py-3.5 hover:bg-afc-green/20 transition-colors uppercase tracking-widest text-sm"
-        >
-          Daftar Pemain Lengkap
-        </motion.button>
 
       </div>
     </section>

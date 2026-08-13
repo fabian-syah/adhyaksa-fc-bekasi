@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowRight, Sun, Moon } from 'lucide-react';
+import { List, X, ArrowRight, Sun, Moon } from '@phosphor-icons/react';
 import { useTheme } from 'next-themes';
 
 export default function Header() {
@@ -79,7 +79,7 @@ export default function Header() {
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                 className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
               >
-                {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+                {theme === 'dark' ? <Sun weight="bold" size={18} /> : <Moon weight="bold" size={18} />}
               </button>
             )}
 
@@ -88,7 +88,7 @@ export default function Header() {
               href="#tickets"
               className="hidden sm:flex items-center gap-1.5 bg-afc-green text-white font-bold uppercase tracking-wider text-[10px] md:text-xs px-3 md:px-5 py-1.5 md:py-2.5 rounded-full hover:bg-afc-green/80 transition-all duration-300 whitespace-nowrap"
             >
-              Beli Tiket <ArrowRight size={12} className="md:w-[14px] md:h-[14px]" />
+              Beli Tiket <ArrowRight weight="bold" size={14} className="md:w-4 md:h-4" />
             </a>
 
             {/* Mobile Menu Button - visible below md */}
@@ -96,7 +96,7 @@ export default function Header() {
               className="md:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-all duration-300"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+              {mobileMenuOpen ? <X weight="bold" size={18} /> : <List weight="bold" size={18} />}
             </button>
           </div>
         </header>
