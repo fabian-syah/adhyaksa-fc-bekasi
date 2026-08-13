@@ -18,9 +18,6 @@ export default function Footer() {
           <div className="lg:col-span-5 px-5 py-6 sm:px-6 sm:py-8 md:p-10 lg:p-12 border-b md:border-b lg:border-b-0 lg:border-r border-border-subtle flex flex-col justify-between">
             <div>
               <div className="flex items-stretch gap-3 sm:gap-4 mb-6 sm:mb-8">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 flex items-center justify-center font-black text-primary text-lg sm:text-2xl border border-primary/40 shrink-0">
-                  AFC
-                </div>
                 <div className="flex flex-col justify-center min-w-0">
                   <span className="text-foreground font-black text-2xl sm:text-3xl tracking-tighter uppercase leading-none">
                     Adhyaksa FC
