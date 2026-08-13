@@ -2,7 +2,6 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import MatchTicker from '@/components/MatchTicker';
 import SquadShowcase from '@/components/SquadShowcase';
-import HistoryTimeline from '@/components/HistoryTimeline';
 import Footer from '@/components/Footer';
 
 export const metadata = {
@@ -17,7 +16,6 @@ export default function Home() {
       <Hero />
       <MatchTicker />
       <SquadShowcase />
-      <HistoryTimeline />
       <Footer />
     </main>
   );
