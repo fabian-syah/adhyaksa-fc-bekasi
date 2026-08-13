@@ -10,8 +10,10 @@ const SEASON_START = new Date('2026-09-18T19:00:00+07:00');
 
 function useCountdown(targetDate: Date) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const update = () => {
       const now = new Date();
       const diff = targetDate.getTime() - now.getTime();
@@ -31,11 +33,11 @@ function useCountdown(targetDate: Date) {
     return () => clearInterval(interval);
   }, [targetDate]);
 
-  return timeLeft;
+  return { timeLeft, mounted };
 }
 
 export default function MatchTicker() {
-  const countdown = useCountdown(SEASON_START);
+  const { timeLeft: countdown, mounted } = useCountdown(SEASON_START);
 
   return (
     <section id="matches" className="w-full bg-afc-base py-12 sm:py-16 md:py-24 border-b border-afc-border">
@@ -99,7 +101,7 @@ export default function MatchTicker() {
                 <div key={unit.label} className="flex flex-col items-center">
                   <div className="w-full aspect-square max-w-[90px] bg-afc-base border border-afc-border flex items-center justify-center group-hover:border-afc-green/30 transition-colors duration-500">
                     <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-afc-gold tracking-widest tabular-nums leading-none">
-                      {String(unit.val).padStart(2, '0')}
+                      {mounted ? String(unit.val).padStart(2, '0') : '--'}
                     </span>
                   </div>
                   <span className="text-afc-main/50 font-bold uppercase tracking-widest text-[8px] sm:text-[10px] md:text-xs mt-2 sm:mt-3">

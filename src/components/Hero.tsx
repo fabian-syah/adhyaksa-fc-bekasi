@@ -13,7 +13,7 @@ export default function Hero() {
     <section id="overview" className="relative w-full min-h-[100svh] flex items-center justify-center bg-afc-base overflow-hidden border-b border-afc-green/20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Patriot_bekasi_stadion.jpg')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
       </div>
 
