@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShoppingBag } from 'lucide-react';
+import { Tote } from '@phosphor-icons/react';
 
 const easing = [0.16, 1, 0.3, 1] as const;
 
@@ -75,7 +75,7 @@ export default function ShopTeaser() {
                   className="relative w-full bg-background text-foreground border border-border-subtle font-black py-4 flex items-center justify-center gap-3 uppercase tracking-widest overflow-hidden group/btn"
                 >
                   <span className="relative z-10 transition-colors duration-300 group-hover/btn:text-dark">Pre-Order Now</span>
-                  <ShoppingBag size={20} className="relative z-10 transition-colors duration-300 group-hover/btn:text-dark" />
+                  <Tote weight="bold" size={20} className="relative z-10 transition-colors duration-300 group-hover/btn:text-dark" />
                   <div className="absolute inset-0 bg-secondary -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500 ease-[0.16,1,0.3,1] z-0"></div>
                 </motion.button>
               </div>
