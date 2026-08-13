@@ -41,7 +41,7 @@ export default function Header() {
 
           {/* Logo */}
           <a href="#overview" className="flex items-center relative z-50 shrink-0 min-w-0">
-            <span className="font-black tracking-tighter text-base sm:text-lg md:text-xl uppercase text-white whitespace-nowrap">
+            <span className="font-heading tracking-widest text-lg sm:text-xl md:text-2xl uppercase text-white whitespace-nowrap">
               Adhyaksa
             </span>
           </a>
@@ -86,7 +86,7 @@ export default function Header() {
             {/* CTA Button - hidden below sm */}
             <a
               href="#tickets"
-              className="hidden sm:flex items-center gap-1.5 bg-primary text-white font-bold uppercase tracking-wider text-[10px] md:text-xs px-3 md:px-5 py-1.5 md:py-2.5 rounded-full hover:bg-[#00b34a] transition-all duration-300 whitespace-nowrap"
+              className="hidden sm:flex items-center gap-1.5 bg-afc-green text-white font-bold uppercase tracking-wider text-[10px] md:text-xs px-3 md:px-5 py-1.5 md:py-2.5 rounded-full hover:bg-afc-green/80 transition-all duration-300 whitespace-nowrap"
             >
               Beli Tiket <ArrowRight size={12} className="md:w-[14px] md:h-[14px]" />
             </a>
@@ -123,8 +123,8 @@ export default function Header() {
                   setActiveTab(link.name);
                   setMobileMenuOpen(false);
                 }}
-                className={`text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tighter transition-colors ${
-                  activeTab === link.name ? 'text-primary' : 'text-white/80 hover:text-white'
+                className={`text-2xl sm:text-3xl md:text-4xl font-heading uppercase tracking-widest transition-colors ${
+                  activeTab === link.name ? 'text-afc-green' : 'text-white/80 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -136,7 +136,7 @@ export default function Header() {
               transition={{ delay: 0.4, duration: 0.4 }}
               href="#tickets"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 sm:mt-6 bg-primary text-white font-black px-8 sm:px-10 py-3.5 sm:py-4 rounded-full uppercase tracking-widest text-sm sm:text-base hover:bg-[#00b34a] transition-colors"
+              className="mt-4 sm:mt-6 bg-afc-green text-white font-bold px-8 sm:px-10 py-3.5 sm:py-4 rounded-full uppercase tracking-widest text-sm sm:text-base hover:bg-afc-green/80 transition-colors"
             >
               Beli Tiket
             </motion.a>

@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import MatchTicker from '@/components/MatchTicker';
 import SquadShowcase from '@/components/SquadShowcase';
+import HistoryTimeline from '@/components/HistoryTimeline';
 import Footer from '@/components/Footer';
 
 export const metadata = {
@@ -11,11 +12,12 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background flex flex-col">
+    <main className="min-h-screen bg-afc-base flex flex-col">
       <Header />
       <Hero />
       <MatchTicker />
       <SquadShowcase />
+      <HistoryTimeline />
       <Footer />
     </main>
   );

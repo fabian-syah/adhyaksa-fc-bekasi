@@ -2,39 +2,44 @@
 
 /* LIGHT MODE DEFAULTS */
 :root {
-  --background: #ffffff;
-  --foreground: #0d1410;
-  --surface: #f4f7f5;
-  --border: rgba(13, 20, 16, 0.1);
-  --dark: #0d1410;
-  --light: #ffffff;
-  --highlight: #00933d; /* Primary in light mode */
-  --highlight-subtle: rgba(0, 147, 61, 0.1);
+  --afc-bg-base: #ffffff;
+  --afc-text-main: #0a110e;
+  --afc-bg-surface: #f2f7f4;
+  --afc-border-subtle: rgba(10, 17, 14, 0.1);
+  --afc-dark: #0a110e;
+  --afc-light: #ffffff;
+  --afc-green-pitch: #00933d; 
+  --afc-green-glow: rgba(0, 147, 61, 0.15);
+  --afc-gold: #cfaa2e; /* Light mode gold variant */
+  --afc-gold-subtle: rgba(207, 170, 46, 0.15);
 }
 
 /* DARK MODE */
 .dark {
-  --background: #0d1410;
-  --foreground: #ffffff;
-  --surface: #16221c;
-  --border: rgba(255, 255, 255, 0.1);
-  --highlight: #fff500; /* Secondary in dark mode */
-  --highlight-subtle: rgba(255, 245, 0, 0.1);
+  --afc-bg-base: #0a110e; /* Deep rich almost-black forest green */
+  --afc-text-main: #ffffff;
+  --afc-bg-surface: #111d18;
+  --afc-border-subtle: rgba(255, 255, 255, 0.08);
+  --afc-green-pitch: #00b84c; /* Brighter green for dark mode */
+  --afc-green-glow: rgba(0, 184, 76, 0.15);
+  --afc-gold: #fff500; 
+  --afc-gold-subtle: rgba(255, 245, 0, 0.15);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-surface: var(--surface);
-  --color-border-subtle: var(--border);
-  --color-primary: #00933d;
-  --color-secondary: #fff500;
-  --color-highlight: var(--highlight);
-  --color-highlight-subtle: var(--highlight-subtle);
-  --color-dark: var(--dark);
-  --color-light: var(--light);
-  --font-sans: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --color-afc-base: var(--afc-bg-base);
+  --color-afc-main: var(--afc-text-main);
+  --color-afc-surface: var(--afc-bg-surface);
+  --color-afc-border: var(--afc-border-subtle);
+  --color-afc-green: var(--afc-green-pitch);
+  --color-afc-green-glow: var(--afc-green-glow);
+  --color-afc-gold: var(--afc-gold);
+  --color-afc-gold-glow: var(--afc-gold-subtle);
+  --color-afc-dark: var(--afc-dark);
+  --color-afc-light: var(--afc-light);
+  
+  --font-heading: var(--font-anton), Arial, Helvetica, sans-serif;
+  --font-body: var(--font-plus-jakarta), Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -46,10 +51,11 @@ section {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background: var(--afc-bg-base);
+  color: var(--afc-text-main);
+  font-family: var(--font-body);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
 }
 
 /* Marquee Animation */
@@ -58,6 +64,6 @@ body {
   100% { transform: translateX(-50%); }
 }
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 25s linear infinite;
   will-change: transform;
 }

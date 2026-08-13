@@ -15,12 +15,12 @@ export default function Ticker() {
   const duplicatedItems = [...tickerItems, ...tickerItems, ...tickerItems];
 
   return (
-    <div className="w-full bg-primary border-y-2 border-secondary overflow-hidden relative flex items-center h-12">
+    <div className="w-full bg-afc-green border-y-2 border-afc-gold overflow-hidden relative flex items-center h-12">
       <div className="flex animate-marquee whitespace-nowrap">
         {duplicatedItems.map((item, index) => (
           <span 
             key={index} 
-            className="text-foreground font-black uppercase tracking-widest text-sm md:text-base mx-4 md:mx-8 flex items-center gap-4 md:gap-8"
+            className="text-white font-heading uppercase tracking-widest text-sm md:text-base mx-4 md:mx-8 flex items-center gap-4 md:gap-8"
           >
             {item}
             {/* Geometric separator block */}

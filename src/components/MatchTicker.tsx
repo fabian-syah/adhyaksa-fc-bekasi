@@ -38,13 +38,13 @@ export default function MatchTicker() {
   const countdown = useCountdown(SEASON_START);
 
   return (
-    <section id="matches" className="w-full bg-background py-12 sm:py-16 md:py-24 border-b border-border-subtle">
+    <section id="matches" className="w-full bg-afc-base py-12 sm:py-16 md:py-24 border-b border-afc-border">
       <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
 
         {/* Section Header */}
-        <div className="mb-8 sm:mb-12 border-b border-border-subtle pb-4 sm:pb-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-foreground uppercase tracking-tighter">
-            Musim <span className="text-primary">2026/2027</span>
+        <div className="mb-8 sm:mb-12 border-b border-afc-border pb-4 sm:pb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading text-afc-main uppercase tracking-widest">
+            Musim <span className="text-afc-green">2026/2027</span>
           </h2>
         </div>
 
@@ -54,36 +54,36 @@ export default function MatchTicker() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: easing }}
-          className="bg-surface border border-border-subtle relative overflow-hidden group"
+          className="bg-afc-surface border border-afc-border relative overflow-hidden group"
         >
-          <div className="absolute top-0 right-0 w-48 sm:w-72 h-48 sm:h-72 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/15 transition-colors duration-700"></div>
-          <div className="absolute bottom-0 left-0 w-32 sm:w-48 h-32 sm:h-48 bg-highlight/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-48 sm:w-72 h-48 sm:h-72 bg-afc-green-glow rounded-full blur-3xl group-hover:bg-afc-green/20 transition-colors duration-700"></div>
+          <div className="absolute bottom-0 left-0 w-32 sm:w-48 h-32 sm:h-48 bg-afc-gold-glow rounded-full blur-3xl"></div>
 
           <div className="relative z-10 p-6 sm:p-8 md:p-12 lg:p-16">
             
             {/* Badge */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
-              <span className="inline-flex items-center gap-1.5 text-primary font-black uppercase tracking-widest text-[10px] sm:text-xs border border-primary/30 px-2.5 sm:px-3 py-1">
+              <span className="inline-flex items-center gap-1.5 text-afc-green font-bold uppercase tracking-widest text-[10px] sm:text-xs border border-afc-green/30 px-2.5 sm:px-3 py-1">
                 <Trophy size={12} className="shrink-0" />
                 Championship 2026/2027
               </span>
-              <span className="inline-flex items-center gap-1.5 text-highlight font-black uppercase tracking-widest text-[10px] sm:text-xs border border-highlight/30 px-2.5 sm:px-3 py-1">
+              <span className="inline-flex items-center gap-1.5 text-afc-gold font-bold uppercase tracking-widest text-[10px] sm:text-xs border border-afc-gold/30 px-2.5 sm:px-3 py-1">
                 Kick-off
               </span>
             </div>
 
             {/* Title */}
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground uppercase tracking-tighter mb-2 sm:mb-3">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-afc-main uppercase tracking-widest mb-2 sm:mb-3">
               Menuju Kick-Off
             </h3>
-            <p className="text-foreground/50 font-bold uppercase tracking-wider text-xs sm:text-sm mb-8 sm:mb-10 md:mb-12 flex flex-wrap items-center gap-x-3 gap-y-1">
+            <p className="text-afc-main/60 font-bold uppercase tracking-wider text-xs sm:text-sm mb-8 sm:mb-10 md:mb-12 flex flex-wrap items-center gap-x-3 gap-y-1">
               <span className="inline-flex items-center gap-1.5">
-                <Calendar size={13} className="text-primary shrink-0" />
+                <Calendar size={13} className="text-afc-green shrink-0" />
                 18 September 2026
               </span>
-              <span className="text-foreground/20 hidden sm:inline">•</span>
+              <span className="text-afc-main/20 hidden sm:inline">•</span>
               <span className="inline-flex items-center gap-1.5">
-                <MapPin size={13} className="text-primary shrink-0" />
+                <MapPin size={13} className="text-afc-green shrink-0" />
                 Patriot Candrabhaga, Bekasi
               </span>
             </p>
@@ -97,12 +97,12 @@ export default function MatchTicker() {
                 { val: countdown.seconds, label: "Detik" },
               ].map((unit) => (
                 <div key={unit.label} className="flex flex-col items-center">
-                  <div className="w-full aspect-square max-w-[90px] bg-background border border-border-subtle flex items-center justify-center group-hover:border-primary/20 transition-colors duration-500">
-                    <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-highlight tracking-tighter tabular-nums leading-none">
+                  <div className="w-full aspect-square max-w-[90px] bg-afc-base border border-afc-border flex items-center justify-center group-hover:border-afc-green/30 transition-colors duration-500">
+                    <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading text-afc-gold tracking-widest tabular-nums leading-none">
                       {String(unit.val).padStart(2, '0')}
                     </span>
                   </div>
-                  <span className="text-foreground/40 font-bold uppercase tracking-widest text-[8px] sm:text-[10px] md:text-xs mt-2 sm:mt-3">
+                  <span className="text-afc-main/50 font-bold uppercase tracking-widest text-[8px] sm:text-[10px] md:text-xs mt-2 sm:mt-3">
                     {unit.label}
                   </span>
                 </div>
