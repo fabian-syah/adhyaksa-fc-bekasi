@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚽ Adhyaksa FC Bekasi
 
-## Getting Started
+Situs resmi klub sepak bola Adhyaksa FC Bekasi — profil tim, skuad, jadwal pertandingan, statistik, dan etalase merchandise. Dibangun dengan Next.js App Router dan Tailwind CSS v4, dengan dukungan mode gelap/terang.
 
-First, run the development server:
+---
+
+## ✨ Fitur
+
+- **Hero & identitas klub** — bagian pembuka dengan visual klub.
+- **Match ticker** — bilah berjalan berisi jadwal/skor pertandingan terkini.
+- **Statistik tim** — ringkasan performa dan angka penting klub.
+- **Skuad (Squad Showcase)** — galeri pemain dengan kartu profil.
+- **Etalase merchandise** — teaser produk resmi klub.
+- **Mode gelap/terang** — tema bisa diganti pengguna, tersimpan sebagai preferensi.
+- **Animasi halus** — transisi dan efek scroll memakai Framer Motion.
+- **Responsif** — tata letak menyesuaikan ponsel, tablet, dan desktop.
+
+## 🧰 Teknologi
+
+| Lapisan | Teknologi |
+|---|---|
+| Framework | Next.js 16 (App Router), React 19, TypeScript |
+| Styling | Tailwind CSS v4 dengan token design system kustom |
+| Ikon | Phosphor Icons (`@phosphor-icons/react`) |
+| Animasi | Framer Motion |
+| Tema | `next-themes` |
+| Lint | ESLint (`eslint-config-next`) |
+
+## 🚀 Cara Menjalankan Lokal
 
 ```bash
+# 1. Clone
+git clone https://github.com/fabian-syah/adhyaksa-fc-bekasi.git
+cd adhyaksa-fc-bekasi
+
+# 2. Pasang dependensi
+npm install
+
+# 3. Jalankan server pengembangan
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Skrip tersedia
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Perintah | Fungsi |
+|---|---|
+| `npm run dev` | Server pengembangan |
+| `npm run build` | Build produksi |
+| `npm run start` | Menjalankan hasil build |
+| `npm run lint` | Menjalankan ESLint |
 
-## Learn More
+## 📁 Struktur Proyek
 
-To learn more about Next.js, take a look at the following resources:
+| Lokasi | Isi |
+|---|---|
+| `src/app/` | Routing utama (`page.tsx`, `layout.tsx`) dan gaya global dengan token design system |
+| `src/components/Hero.tsx` | Bagian pembuka halaman |
+| `src/components/MatchTicker.tsx` | Bilah jadwal/skor pertandingan |
+| `src/components/Ticker.tsx` | Komponen ticker generik |
+| `src/components/Statistics.tsx` | Statistik tim |
+| `src/components/SquadShowcase.tsx` | Galeri skuad pemain |
+| `src/components/ShopTeaser.tsx` | Etalase merchandise |
+| `src/components/Header.tsx` / `Footer.tsx` | Navigasi dan footer |
+| `src/components/ThemeProvider.tsx` | Penyedia tema gelap/terang |
+| `public/` | Aset statis (logo, gambar pemain, produk) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Kustomisasi
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Token desain (warna, tipografi, radius) didefinisikan di `src/app/globals.css` sebagai variabel CSS, sehingga tema klub bisa diubah dari satu tempat tanpa menyentuh komponen.
 
-## Deploy on Vercel
+## 🗺️ Rencana Pengembangan
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [ ] Data pertandingan & skor dari sumber dinamis (CMS/API)
+- [ ] Profil pemain lengkap dengan halaman detail
+- [ ] Katalog merchandise dengan keranjang
+- [ ] Berita & artikel klub
+- [ ] Optimasi SEO (metadata per halaman, sitemap, Open Graph)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Lisensi
+
+MIT
