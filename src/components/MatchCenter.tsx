@@ -198,10 +198,10 @@ export default function MatchCenter() {
     {
       competition: 'Pegadaian Championship',
       round: 'Pekan 9',
-      date: 'Sabtu, 7 Nov 2026 • 19:00 WIB',
+      date: 'Minggu, 8 Nov 2026 • 19:00 WIB',
       home: 'Semen Padang (4.)',
       away: 'Adhyaksa FC (8.)',
-      venue: 'Stadion Gelora H. Agus Salim, Padang',
+      venue: 'Stadion Madya Gelora Bung Karno, Jakarta',
       isHome: false,
       broadcast: 'Indosiar & Vidio',
       highlight: 'Laga Tandang Liga',
@@ -602,7 +602,7 @@ export default function MatchCenter() {
                   </div>
                   <div className="flex items-center gap-1.5 font-semibold text-emerald-600 dark:text-emerald-400">
                     <Lightning size={16} weight="fill" />
-                    <span>Lanjutan Liga Pekan 9: Sab, 7 Nov vs Semen Padang</span>
+                    <span>Lanjutan Liga Pekan 9: Min, 8 Nov vs Semen Padang</span>
                   </div>
                 </div>
               </div>
@@ -643,7 +643,7 @@ export default function MatchCenter() {
                     <ShieldCheck size={16} weight="fill" />
                     <span>Agenda Pekan Ini</span>
                   </div>
-                  Setelah laga Cup melawan Java United FC (4 Nov), Laskar Patriot langsung bersiap bertandang ke Padang menghadapi Semen Padang (7 Nov).
+                  Setelah laga Cup melawan Java United FC (4 Nov), Laskar Patriot langsung bersiap menghadapi laga tandang krusial melawan Semen Padang di Stadion Madya Gelora Bung Karno (8 Nov).
                 </div>
               </div>
             </motion.div>

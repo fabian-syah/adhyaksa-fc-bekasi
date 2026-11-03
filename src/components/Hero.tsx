@@ -126,7 +126,7 @@ export default function Hero() {
                   Laga Tandang Pekan 9 Liga
                 </span>
                 <span className="px-3 py-1 rounded-full bg-slate-100 dark:bg-white/10 text-[11px] font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
-                  Sabtu, 7 Nov 2026
+                  Minggu, 8 Nov 2026
                 </span>
               </div>
 
@@ -179,11 +179,11 @@ export default function Hero() {
               <div className="rounded-2xl bg-slate-50 dark:bg-black/40 p-4 border border-slate-200 dark:border-white/5 space-y-2 text-xs text-slate-600 dark:text-slate-300">
                 <div className="flex items-center gap-2.5">
                   <CalendarBlank size={16} className="text-amber-500 shrink-0" />
-                  <span className="font-medium">Sabtu, 7 November 2026 • 19:00 WIB</span>
+                  <span className="font-medium">Minggu, 8 November 2026 • 19:00 WIB</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <MapPin size={16} className="text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span className="font-medium truncate">Stadion Gelora H. Agus Salim, Padang</span>
+                  <span className="font-medium truncate">Stadion Madya Gelora Bung Karno, Jakarta</span>
                 </div>
                 <div className="pt-2 border-t border-slate-200/60 dark:border-white/10 flex items-center justify-between text-[11px] text-emerald-700 dark:text-emerald-400 font-bold">
                   <span>🏆 I.League Cup: Besok (4 Nov • 16.00 WIB) vs Java United FC</span>
