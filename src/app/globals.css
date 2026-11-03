@@ -1,42 +1,52 @@
 @import "tailwindcss";
 
-/* LIGHT MODE DEFAULTS */
+/* TELL TAILWIND V4 TO USE CLASS-BASED DARK MODE FOR NEXT-THEMES */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* LIGHT MODE (BRIGHT, ENERGETIC, CRISP LIKE REAL MADRID / LIVERPOOL LIGHT) */
 :root {
-  --afc-bg-base: #ffffff;
-  --afc-text-main: #0a110e;
-  --afc-bg-surface: #f2f7f4;
-  --afc-border-subtle: rgba(10, 17, 14, 0.1);
-  --afc-dark: #0a110e;
-  --afc-light: #ffffff;
-  --afc-green-pitch: #00933d; 
-  --afc-green-glow: rgba(0, 147, 61, 0.15);
-  --afc-gold: #cfaa2e; /* Light mode gold variant */
-  --afc-gold-subtle: rgba(207, 170, 46, 0.15);
+  --afc-bg-base: #f8fafc;
+  --afc-text-main: #0f172a;
+  --afc-text-muted: #64748b;
+  --afc-bg-surface: #ffffff;
+  --afc-bg-card: #ffffff;
+  --afc-border-subtle: #e2e8f0;
+  --afc-green-pitch: #008738; 
+  --afc-green-dark: #005a26;
+  --afc-green-neon: #00d659;
+  --afc-green-glow: rgba(0, 214, 89, 0.18);
+  --afc-gold: #d97706; 
+  --afc-gold-subtle: rgba(217, 119, 6, 0.15);
 }
 
-/* DARK MODE */
+/* DARK MODE (DEEP CHARCOAL PITCH, NEON ACCENTS, LIKE MAN CITY / AC MILAN NIGHT) */
 .dark {
-  --afc-bg-base: #0a110e; /* Deep rich almost-black forest green */
-  --afc-text-main: #ffffff;
-  --afc-bg-surface: #111d18;
-  --afc-border-subtle: rgba(255, 255, 255, 0.08);
-  --afc-green-pitch: #00b84c; /* Brighter green for dark mode */
-  --afc-green-glow: rgba(0, 184, 76, 0.15);
-  --afc-gold: #fff500; 
-  --afc-gold-subtle: rgba(255, 245, 0, 0.15);
+  --afc-bg-base: #070d0a;
+  --afc-text-main: #f8fafc;
+  --afc-text-muted: #94a3b8;
+  --afc-bg-surface: #0f1a14;
+  --afc-bg-card: #14231b;
+  --afc-border-subtle: rgba(255, 255, 255, 0.1);
+  --afc-green-pitch: #00b347; 
+  --afc-green-dark: #008738;
+  --afc-green-neon: #00e659;
+  --afc-green-glow: rgba(0, 230, 89, 0.25);
+  --afc-gold: #f59e0b; 
+  --afc-gold-subtle: rgba(245, 158, 11, 0.22);
 }
 
 @theme inline {
   --color-afc-base: var(--afc-bg-base);
   --color-afc-main: var(--afc-text-main);
+  --color-afc-muted: var(--afc-text-muted);
   --color-afc-surface: var(--afc-bg-surface);
+  --color-afc-card: var(--afc-bg-card);
   --color-afc-border: var(--afc-border-subtle);
   --color-afc-green: var(--afc-green-pitch);
+  --color-afc-green-neon: var(--afc-green-neon);
   --color-afc-green-glow: var(--afc-green-glow);
   --color-afc-gold: var(--afc-gold);
   --color-afc-gold-glow: var(--afc-gold-subtle);
-  --color-afc-dark: var(--afc-dark);
-  --color-afc-light: var(--afc-light);
   
   --font-heading: var(--font-anton), Arial, Helvetica, sans-serif;
   --font-body: var(--font-plus-jakarta), Arial, Helvetica, sans-serif;
@@ -47,53 +57,80 @@ html {
 }
 
 section {
-  scroll-margin-top: 60px;
+  scroll-margin-top: 80px;
 }
 
 body {
   background: var(--afc-bg-base);
   color: var(--afc-text-main);
   font-family: var(--font-body);
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-x: hidden;
 }
 
-/* Marquee Animation */
-@keyframes marquee {
-  0% { transform: translateX(0); }
+/* Graphic Mesh & Speed Accents */
+@keyframes speed-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-150%); }
+  100% { transform: translateX(150%); }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
 }
+
+.animate-speed-pulse {
+  animation: speed-pulse 4s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer-sweep 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
 .animate-marquee {
-  animation: marquee 25s linear infinite;
-  will-change: transform;
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
 
 @layer utilities {
   .section-padding {
-    @apply py-12 sm:py-16 md:py-24;
+    @apply py-16 sm:py-20 md:py-28;
   }
   
   .container-default {
-    @apply container mx-auto px-4 sm:px-6 max-w-7xl;
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
   }
 
-  .text-heading-xl {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-heading uppercase tracking-widest leading-none;
-  }
-
+  /* Dynamic Graphic Action Buttons */
   .btn-primary {
-    @apply relative bg-afc-green text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden rounded-full uppercase tracking-widest text-sm sm:text-base md:text-lg transition-colors hover:bg-afc-green/80;
+    @apply relative inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 via-emerald-500 to-green-500 hover:from-emerald-500 hover:to-green-400 text-white font-extrabold px-7 py-3.5 rounded-full text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-[0_8px_25px_rgba(0,180,71,0.35)] hover:shadow-[0_12px_35px_rgba(0,214,89,0.5)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer overflow-hidden;
   }
 
   .btn-outline {
-    @apply relative bg-transparent text-white font-bold px-6 sm:px-8 md:px-10 py-3.5 sm:py-4 md:py-5 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden border border-afc-green/40 rounded-full uppercase tracking-widest text-sm sm:text-base md:text-lg transition-colors hover:bg-afc-green/20 hover:border-afc-green;
+    @apply relative inline-flex items-center justify-center gap-2 bg-white/60 dark:bg-white/5 hover:bg-emerald-600/10 text-slate-800 dark:text-emerald-300 font-extrabold px-7 py-3.5 rounded-full text-xs sm:text-sm uppercase tracking-wider border-2 border-emerald-600/30 hover:border-emerald-500 transition-all duration-300 shadow-sm hover:-translate-y-0.5 active:translate-y-0 backdrop-blur-md cursor-pointer;
   }
 
-  .border-b-subtle {
-    @apply border-b border-afc-border;
-  }
-
-  .text-overline {
-    @apply font-bold uppercase tracking-wider sm:tracking-widest text-xs sm:text-sm;
+  /* Frosted Graphic Glass Cards */
+  .card-graphic {
+    @apply bg-white/90 dark:bg-[#101d16]/90 border border-slate-200/80 dark:border-white/10 rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl transition-all duration-300;
   }
 }

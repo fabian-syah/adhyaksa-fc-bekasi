@@ -15,8 +15,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Adhyaksa FC Bekasi | Kebanggaan Bekasi",
-  description: "Website Resmi Adhyaksa FC Bekasi. Berita terbaru, jadwal pertandingan, tiket, dan informasi tim utama.",
+  title: "Adhyaksa FC Bekasi | Website Resmi Klub Sepak Bola",
+  description: "Website resmi Adhyaksa FC Bekasi. Jadwal pertandingan, klasemen Pegadaian Championship, profil skuad tim utama, dan berita terbaru klub.",
+  icons: {
+    icon: "/images/club/logo.png",
+    shortcut: "/images/club/logo.png",
+    apple: "/images/club/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -31,8 +36,8 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          enableSystem
+          defaultTheme="light"
+          enableSystem={false}
           disableTransitionOnChange
         >
           {children}
