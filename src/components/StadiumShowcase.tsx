@@ -226,25 +226,25 @@ export default function StadiumShowcase() {
         </div>
 
         {/* Stadium Specifications Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-slate-200 dark:border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 pt-8 border-t border-slate-200 dark:border-white/10">
           {specs.map((spec, i) => {
             const Icon = spec.icon;
             return (
               <div
                 key={i}
-                className="p-5 rounded-2xl bg-white dark:bg-white/5 border border-slate-200/90 dark:border-white/10 hover:border-emerald-500 transition-colors flex items-center gap-4 shadow-xs hover:shadow-sm"
+                className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-white/5 border border-slate-200/90 dark:border-white/10 hover:border-emerald-500 transition-colors flex items-center gap-3.5 sm:gap-4 shadow-xs hover:shadow-sm"
               >
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
-                  <Icon size={24} weight="fill" />
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                  <Icon size={22} weight="fill" />
                 </div>
-                <div>
-                  <span className="font-heading text-xl sm:text-2xl text-slate-900 dark:text-white block leading-none mb-1">
+                <div className="flex-1 min-w-0">
+                  <span className="font-heading text-xl sm:text-2xl text-slate-900 dark:text-white block leading-tight mb-0.5 truncate">
                     {spec.value}
                   </span>
-                  <span className="text-[11px] font-extrabold text-slate-700 dark:text-slate-300 uppercase tracking-wider block">
+                  <span className="text-[11px] font-extrabold text-slate-700 dark:text-slate-300 uppercase tracking-wider block truncate">
                     {spec.label}
                   </span>
-                  <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium block">
+                  <span className="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium block truncate">
                     {spec.sub}
                   </span>
                 </div>

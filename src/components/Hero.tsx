@@ -22,33 +22,22 @@ export default function Hero() {
   return (
     <section id="overview" className="relative w-full pt-32 sm:pt-40 pb-20 sm:pb-28 overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-100 dark:from-slate-950 dark:via-[#07130c] dark:to-slate-950 text-slate-900 dark:text-white border-b border-slate-200 dark:border-white/10 transition-colors">
       
-      {/* GRAPHIC BACKDROP: Man City & Arsenal Dynamic Diagonal Speed Slashes */}
+      {/* GRAPHIC BACKDROP: Modern Clean Stadium Atmosphere */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden select-none">
-        {/* Authentic High-Res Stadium Photo Base with Contrast Grade */}
+        {/* Authentic Stadium Panorama (Bright Open Sky & Turf, Zero Black Scoreboard Artifacts) */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20 dark:opacity-35 scale-105 filter contrast-125 transition-opacity duration-700"
-          style={{ backgroundImage: "url('/images/stadium/hero-stadium.jpg')" }}
+          className="absolute inset-0 bg-cover bg-bottom opacity-15 dark:opacity-25 transition-opacity duration-700"
+          style={{ backgroundImage: "url('/images/stadium/stadium-panorama.jpg')" }}
         />
 
-        {/* Diagonal Speed Stripes (Man City / AC Milan Graphic Language) */}
-        <div className="absolute -top-32 -left-20 w-[650px] h-[850px] bg-gradient-to-br from-emerald-500/15 via-emerald-600/5 to-transparent -skew-x-12 blur-3xl transform" />
-        <div className="absolute top-10 right-0 w-[550px] h-[750px] bg-gradient-to-bl from-amber-500/15 via-emerald-500/5 to-transparent -skew-x-12 blur-3xl transform" />
-
-        {/* Dynamic Graphic Lines */}
-        <svg className="absolute inset-0 w-full h-full opacity-20 dark:opacity-40" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="slashGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#00e659" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#f59e0b" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <line x1="12%" y1="0%" x2="38%" y2="100%" stroke="url(#slashGrad)" strokeWidth="1.5" strokeDasharray="8 8" />
-          <line x1="68%" y1="0%" x2="94%" y2="100%" stroke="url(#slashGrad)" strokeWidth="2" />
-        </svg>
+        {/* Subtle Ambient Glows */}
+        <div className="absolute top-0 left-0 w-80 sm:w-96 h-80 sm:h-96 bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/3 right-0 w-80 sm:w-96 h-80 sm:h-96 bg-amber-500/10 dark:bg-amber-500/15 rounded-full blur-3xl pointer-events-none" />
 
         {/* Soft Vignette Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-100 via-transparent to-transparent dark:from-slate-950 dark:via-transparent dark:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-100 via-transparent to-slate-100/70 dark:from-slate-950 dark:via-transparent dark:to-slate-950/70" />
       </div>
+
 
       <div className="container-default relative z-10">
         
@@ -86,10 +75,10 @@ export default function Hero() {
             </motion.p>
 
             {/* Graphic Action Buttons (NO TICKET BUTTON) */}
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
               <a
                 href="#matches"
-                className="btn-primary"
+                className="btn-primary w-full sm:w-auto justify-center"
               >
                 <CalendarBlank size={18} weight="bold" />
                 <span>Jadwal & Hasil Laga</span>
@@ -97,7 +86,7 @@ export default function Hero() {
               </a>
               <a
                 href="#squad"
-                className="btn-outline"
+                className="btn-outline w-full sm:w-auto justify-center"
               >
                 <UsersThree size={18} weight="bold" />
                 <span>Skuad Tim Utama</span>
